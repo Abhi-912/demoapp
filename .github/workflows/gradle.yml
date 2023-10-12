@@ -22,4 +22,10 @@ jobs:
     - name: Grant execute permisssions
       run: chmod +x gradlew
     - name: Build bootjar
-      run: ./gradlew test bootJar
+      run: ./gradlew test jacocoTestReport bootJar
+
+    - name: Generate JaCoCo Badge
+      uses: cicirello/jacoco-badge-generator@v2
+      with:
+        generate-branches-badge: true
+        jacoco-csv-file: build/reports/jacoco/test/jacocoTestReport.csv
