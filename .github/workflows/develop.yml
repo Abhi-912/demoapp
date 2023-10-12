@@ -7,4 +7,4 @@ on:
 jobs:
   build:
     name: Build
-    uses: .github/workflows/gradle.yml
+    uses: ./.github/workflows/gradle.yml
