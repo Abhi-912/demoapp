@@ -23,9 +23,17 @@ jobs:
       run: chmod +x gradlew
     - name: Build bootjar
       run: ./gradlew test jacocoTestReport bootJar
-
-    - name: Generate JaCoCo Badge
-      uses: cicirello/jacoco-badge-generator@v2
+      
+    - name: Jacoco Report to PR
+      id: jacoco
+      uses: madrapps/jacoco-report@v1.6.1
       with:
-        generate-branches-badge: true
-        jacoco-csv-file: build/reports/testCoverage.csv
+        paths: /build/reports/jacoco/testCoverage.xml
+        title: Code Coverage
+        update-comment: true
+
+    # - name: Generate JaCoCo Badge
+    #   uses: cicirello/jacoco-badge-generator@v2
+    #   with:
+    #     generate-branches-badge: true
+    #     jacoco-csv-file: build/reports/testCoverage.csv
