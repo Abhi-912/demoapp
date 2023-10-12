@@ -1,0 +1,10 @@
+name: DEV
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  build:
+    name: Build
+    uses: ./gradle.yml
