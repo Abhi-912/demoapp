@@ -12,7 +12,6 @@ java {
 	sourceCompatibility = '17'
 }
 test {
-	useJunitPlatform()
 	finalizedBy jacocoTestReport
 }
 jacocoTestReport {
