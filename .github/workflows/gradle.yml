@@ -23,6 +23,6 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
     - name: Grant execute permisssions
-      uses: chmod +x gradlew
+      run: chmod +x gradlew
     - name: Build bootjar
-      uses: ./gradlew bootjar
+      run: ./gradlew bootjar
