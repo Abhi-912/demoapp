@@ -10,7 +10,7 @@ class DemoApplicationTests {
 	@Test
 	void contextLoads() {
 		boolean a = true;
-		Assertions.assertEquals(true, a);
+		Assertions.assertEquals(false, a);
 	}
 
 }
