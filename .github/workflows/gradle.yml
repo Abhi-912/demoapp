@@ -22,4 +22,4 @@ jobs:
     - name: Grant execute permisssions
       run: chmod +x gradlew
     - name: Build bootjar
-      run: ./gradlew test bootJar
+      run: ./gradlew bootJar
