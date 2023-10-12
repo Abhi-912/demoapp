@@ -28,7 +28,7 @@ jobs:
       id: jacoco
       uses: madrapps/jacoco-report@v1.6.1
       with:
-        paths: /build/reports/jacoco/testCoverage.xml
+        paths: /build/reports/jacoco/jacocoXml.xml
         title: Code Coverage
         update-comment: true
 
