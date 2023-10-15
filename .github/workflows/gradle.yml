@@ -24,16 +24,11 @@ jobs:
     - name: Build bootjar
       run: ./gradlew test jacocoTestReport bootJar
       
-    - name: Generate JaCoCo Badge
-      uses: cicirello/jacoco-badge-generator@v2
-      with:
-        generate-branches-badge: true
-        jacoco-csv-file: build/reports/testCoverage.csv
-
     - name: Generate JaCoCo badge
       id: jacoco
       uses: cicirello/jacoco-badge-generator@v2
       with:
+        jacoco-csv-file: build/reports/testCoverage.csv
         badges-directory: badges
         generate-branches-badge: true
         generate-summary: true
