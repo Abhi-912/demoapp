@@ -45,7 +45,7 @@ jobs:
         name: jacoco-report
         path: target/site/jacoco/
 
-    - name: Commit and push the coverage badges and summary file
+    - name: Commit and push the coverage badges and summary fil
       if: ${{ github.event_name != 'pull_request' }}
       run: |
         cd badges
